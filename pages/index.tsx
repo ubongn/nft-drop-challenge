@@ -11,22 +11,23 @@ interface Props {
 
 const Home = ({ collections }: Props) => {
   return (
-    <div className="mx-auto max-w-7xl flex min-h-screen flex-col py-20 px-10 2xl:px-0">
-      <Head>
-        <title>NFT Drop</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-        <h1 className="w-52 cursor-pointer text-2xl mb-10 font-extralight sm:w-80">
+    <div className='bg-slate-300'>
+      <div className="mx-auto flex min-h-screen max-w-7xl flex-col py-20 px-10 2xl:px-0 bg">
+        <Head>
+          <title>NFT Drop</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+
+        <h1 className="mb-10 w-52 cursor-pointer text-2xl font-extralight sm:w-80">
           The{' '}
-          <span className="font-extrabold text-zinc-900 underline decoration-pink-600/50">
+          <span className="font-extrabold text-zinc-700 underline decoration-pink-700/50">
             {' '}
             Blingz
           </span>{' '}
           NFT Market Place
         </h1>
 
-        <main className=" bg-slate-100 p-10 shadow-xl shadow-rose-400/20 lg:px-10 2xl:px-48">
+        <main className=" bg-slate-100 p-10 shadow-xl shadow-rose-400/20 lg:px-10 2xl:px-48 rounded-3xl">
           <div className="mt-4 flex flex-col gap-8 md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {collections.map((collection, idx) => (
               <Link key={idx} href={`/nft/${collection.slug.current}`}>
@@ -51,6 +52,7 @@ const Home = ({ collections }: Props) => {
           </div>
         </main>
       </div>
+    </div>
   )
 }
 
